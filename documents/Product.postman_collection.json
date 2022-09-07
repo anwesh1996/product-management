@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Product",
+		"_postman_id": "2816e946-c97e-c9c7-2aba-975f7652abc8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get products with filter",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/products?rangeLowerBound=10&rangeUpperBound=100&rating=5&limit=10&page=0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "rangeLowerBound",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "rangeUpperBound",
+							"value": "100",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "page",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/product",
+			"request": {
+				"url": "localhost:3000/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Prod A\",\n\t\"price\":80,\n\t\"average_rating\":3.5\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
